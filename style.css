@@ -1,0 +1,145 @@
+/* hey i ahve commit some changes */
+@font-face {
+  font-family: face;
+  src: url(Work_Sans/WorkSans-Italic-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: face;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0px 90px;
+  gap: 70px;
+}
+#left {
+  height: 80%;
+  width: 50%;
+  display: flex;
+  /* display flex not only divide in linear way but also in vertical way */
+  /* After changing it to column main and cross interchange */
+  flex-direction: column;
+  /* works in main axis which is now vertical axis */
+  justify-content: space-between;
+  /* works in vertical axis which is now main axis */
+  /* align-items: center; */
+  /* But we don't need it our elements are going from left to right */
+}
+#left h1 {
+  font-size: 145px;
+  font-weight: 500;
+  line-height: 155px;
+  text-decoration: none;
+}
+#bottom-left {
+  height: 40%;
+}
+#color {
+  margin-left: 20px;
+  height: 15px;
+  width: fit-content;
+  padding: 20px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  align-items: center;
+}
+#color h4 {
+  font-weight: 400;
+}
+
+#color1 {
+  height: 15px;
+  width: 15px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: burlywood;
+}
+#color2 {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: brown;
+}
+#left-description {
+  padding: 50px 0px 0px 0px;
+}
+#left-description h2 {
+  font-size: 30px;
+}
+#left-description h4 {
+  padding-top: 12px;
+  width: 60%;
+  font-weight: 400;
+  color: #444;
+}
+
+#right {
+  height: 70%;
+  width: 35%;
+  position: relative;
+}
+#right-top {
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+#right-top h4 {
+  font-size: 20px;
+}
+#right i {
+  height: 10px;
+  width: 10px;
+}
+#right img {
+  height: 92%;
+  width: 100%;
+  /* Whenever we are using img tag use object-fit */
+  /* Whenever we are placing div ke piche or background then use background-size:cover */
+  object-fit: cover;
+}
+#black-circle {
+  position: absolute;
+  right: -20%;
+  top: 22%;
+  height: 190px;
+  width: 190px;
+  background-color: #221f1f;
+  border-radius: 50%;
+  color: white;
+  /* to correct the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#black-circle h5 {
+  font-size: 20px;
+  font-weight: 300;
+}
+#rotated {
+  position: absolute;
+  left: -10%;
+  bottom: 4%;
+  bottom: 0;
+  rotate: -90deg;
+  /* But here is a problem it's rotating from center */
+  /* and effecting -y axis we don't want that */
+  /* There is a point called transform origin ; point via which we rotate the element but will rotate accordingly we want*/
+  transform-origin: 0 0;
+  font-size: 35px;
+  font-weight: 400;
+}
